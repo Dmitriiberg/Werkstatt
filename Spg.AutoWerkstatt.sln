@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.AutoWerkstatt.WebApplication", "Src\Spg.AutoWerkstatt.WebApplication\Spg.AutoWerkstatt.WebApplication.csproj", "{78E45CAA-5C8A-4B8C-8011-93AE019DC900}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.AutoWerkstatt.WebApplication", "Src\Spg.AutoWerkstatt.WebApplication\Spg.AutoWerkstatt.WebApplication.csproj", "{78E45CAA-5C8A-4B8C-8011-93AE019DC900}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.AutoWerkstatt.Domain", "Src\Spg.AutoWerkstatt.Domain\Spg.AutoWerkstatt.Domain.csproj", "{C3913DCF-EDD5-45A8-8369-657EF01E54B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.AutoWerkstatt.Domain", "Src\Spg.AutoWerkstatt.Domain\Spg.AutoWerkstatt.Domain.csproj", "{C3913DCF-EDD5-45A8-8369-657EF01E54B0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{9D897B91-CFFB-4DB7-A996-0D12AD56910E}"
 EndProject
@@ -13,9 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation", "presentation", "{A79D592F-3025-45EA-829F-727101BE6716}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.AutoWerkstatt.Apllication", "Spg.AutoWerkstatt.Apllication\Spg.AutoWerkstatt.Apllication.csproj", "{751E908D-8975-48D3-B79E-36EE1EFBD222}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.AutoWerkstatt.Apllication", "Src\Spg.AutoWerkstatt.Apllication\Spg.AutoWerkstatt.Apllication.csproj", "{7CBBC8B1-E9C3-415F-90A9-FEC1865B0398}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spg.AutoWerkstatt.DbEf", "Spg.AutoWerkstatt.DbEf\Spg.AutoWerkstatt.DbEf.csproj", "{4B1ECBC3-7CF0-4678-948E-E69C6D375DE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spg.AutoWerkstatt.DbEf", "Src\Spg.AutoWerkstatt.DbEf\Spg.AutoWerkstatt.DbEf.csproj", "{889CF39D-A4E9-4815-AA7B-8BE6992E1D68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +31,14 @@ Global
 		{C3913DCF-EDD5-45A8-8369-657EF01E54B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3913DCF-EDD5-45A8-8369-657EF01E54B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3913DCF-EDD5-45A8-8369-657EF01E54B0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{751E908D-8975-48D3-B79E-36EE1EFBD222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{751E908D-8975-48D3-B79E-36EE1EFBD222}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{751E908D-8975-48D3-B79E-36EE1EFBD222}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{751E908D-8975-48D3-B79E-36EE1EFBD222}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4B1ECBC3-7CF0-4678-948E-E69C6D375DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B1ECBC3-7CF0-4678-948E-E69C6D375DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4B1ECBC3-7CF0-4678-948E-E69C6D375DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4B1ECBC3-7CF0-4678-948E-E69C6D375DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CBBC8B1-E9C3-415F-90A9-FEC1865B0398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CBBC8B1-E9C3-415F-90A9-FEC1865B0398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CBBC8B1-E9C3-415F-90A9-FEC1865B0398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CBBC8B1-E9C3-415F-90A9-FEC1865B0398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{889CF39D-A4E9-4815-AA7B-8BE6992E1D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{889CF39D-A4E9-4815-AA7B-8BE6992E1D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{889CF39D-A4E9-4815-AA7B-8BE6992E1D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{889CF39D-A4E9-4815-AA7B-8BE6992E1D68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,8 +46,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{78E45CAA-5C8A-4B8C-8011-93AE019DC900} = {A79D592F-3025-45EA-829F-727101BE6716}
 		{C3913DCF-EDD5-45A8-8369-657EF01E54B0} = {9D897B91-CFFB-4DB7-A996-0D12AD56910E}
-		{751E908D-8975-48D3-B79E-36EE1EFBD222} = {9D897B91-CFFB-4DB7-A996-0D12AD56910E}
-		{4B1ECBC3-7CF0-4678-948E-E69C6D375DE5} = {4A344C2D-9A4F-4C08-BA11-9443CAD97F73}
+		{7CBBC8B1-E9C3-415F-90A9-FEC1865B0398} = {9D897B91-CFFB-4DB7-A996-0D12AD56910E}
+		{889CF39D-A4E9-4815-AA7B-8BE6992E1D68} = {4A344C2D-9A4F-4C08-BA11-9443CAD97F73}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B1ED6C58-8BD3-4C65-9770-B43601D1F73F}
