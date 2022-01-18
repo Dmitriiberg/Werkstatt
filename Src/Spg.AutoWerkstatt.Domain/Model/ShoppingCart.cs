@@ -9,7 +9,7 @@ namespace Spg.AutoWerkstatt.Domain.Model
     public enum States { ACTIVE = 0, INPAYMENT, SENT }
     public class ShoppingCart
     {
-        public long Id { get; set; }
+        public long ShoppingCartId { get; set; }
 
         public States State { get; set; }
 
@@ -17,7 +17,7 @@ namespace Spg.AutoWerkstatt.Domain.Model
         public User User { get; set; }
 
         public long PaymentId { get; set; }
-        public IList<Payment> Payments { get; set; }
+        public IReadOnlyList<Payment> Payments { get; set; }
 
     }
 }

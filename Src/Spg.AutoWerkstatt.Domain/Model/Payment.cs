@@ -10,7 +10,7 @@ namespace Spg.AutoWerkstatt.Domain.Model
 
     public class Payment
     {
-        public long Id { get; set; }
+        public long PaymentId { get; set; }
 
         public PaymentStates PaymentStates { get; set; }
 

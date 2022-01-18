@@ -8,7 +8,7 @@ namespace Spg.AutoWerkstatt.Domain.Model
 {
     public class User
     {
-        public long Id { get; set; }
+        public long UserId { get; set; }
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -21,6 +21,6 @@ namespace Spg.AutoWerkstatt.Domain.Model
         public int Tel { get; set; }
         public string Email { get; set; }
 
-        public IList<ShoppingCart> ShoppingCarts { get; set; }
+        public IReadOnlyList<ShoppingCart> ShoppingCarts { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace Spg.AutoWerkstatt.Domain.Model
 {
     public class Leistungen
     {
-        public long Id { get; set; }
+        public long LeistungenId { get; set; }
 
         public string Name { get; set; }
 
@@ -22,6 +22,9 @@ namespace Spg.AutoWerkstatt.Domain.Model
 
         protected List<Price> _prices = new();
         public virtual IReadOnlyList<Price> Prices => _prices;
+
+
+
 
         //public  void AddPrice(Price price)
         //{

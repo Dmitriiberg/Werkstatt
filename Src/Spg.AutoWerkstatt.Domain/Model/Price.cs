@@ -8,7 +8,7 @@ namespace Spg.AutoWerkstatt.Domain.Model
 {
     public class Price
     {
-        public long Id { get; set; }
+        public long PriceId { get; set; }
 
         public decimal Netto { get; set; }
         public decimal Tax { get; set; }

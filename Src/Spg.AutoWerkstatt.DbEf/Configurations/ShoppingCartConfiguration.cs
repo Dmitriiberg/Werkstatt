@@ -13,8 +13,8 @@ namespace Spg.AutoWerkstatt.DbEf.Configurations
     {
         public void Configure(EntityTypeBuilder<ShoppingCart> builder)
         {
-            builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).UseIdentityColumn();
+            builder.HasKey(x => x.ShoppingCartId);
+            builder.Property(x => x.ShoppingCartId).UseIdentityColumn();
 
             builder
                 .HasOne<User>(u => u.User)

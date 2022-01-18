@@ -8,7 +8,7 @@ namespace Spg.AutoWerkstatt.Domain.Model
 {
     public class Werkstatt
     {
-        public long Id { get; set; }
+        public long WerkstattId { get; set; }
 
         public string Name { get; set; }
         public string Stadt { get; set; }
