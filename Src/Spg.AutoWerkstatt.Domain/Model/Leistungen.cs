@@ -30,10 +30,11 @@ namespace Spg.AutoWerkstatt.Domain.Model
         public long WerkstattId { get; set; }
         public virtual Werkstatt Werkstatt { get; set; }
 
+        //public IList<Price> prices { get; set; }
 
         protected List<Price> _prices = new();
 
-       
+
 
         public virtual IReadOnlyList<Price> Prices => _prices;
 

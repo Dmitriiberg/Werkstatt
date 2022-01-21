@@ -8,6 +8,14 @@ namespace Spg.AutoWerkstatt.Domain.Model
 {
     public class Price
     {
+        public Price(long priceId, decimal netto, decimal tax, Leistungen leistungen)
+        {
+            PriceId = priceId;
+            Netto = netto;
+            Tax = tax;
+            Leistungen = leistungen;
+        }
+
         public long PriceId { get; set; }
 
         public decimal Netto { get; set; }
@@ -17,5 +25,7 @@ namespace Spg.AutoWerkstatt.Domain.Model
         public long LeistungId { get; set; }
 
         public virtual Leistungen Leistungen { get; set; }
+
+        public List<Leistungen> leistungens = new();
     }
 }
