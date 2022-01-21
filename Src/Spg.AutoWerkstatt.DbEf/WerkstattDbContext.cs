@@ -14,6 +14,10 @@ namespace Spg.AutoWerkstatt.DbEf
         public DbSet<User> User { get; set; }
         public DbSet<Category> Category { get; set; }
 
+        public DbSet<Leistungen> Leistungen { get; set; }
+
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

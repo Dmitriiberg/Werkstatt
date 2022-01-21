@@ -7,8 +7,19 @@ using System.Threading.Tasks;
 
 namespace Spg.AutoWerkstatt.Domain.Model
 {
+
     public class Leistungen
     {
+        public Leistungen(long leistungenId, string name, long categoryId, Category category, long werkstattId, Werkstatt werkstatt)
+        {
+            LeistungenId = leistungenId;
+            Name = name;
+            CategoryId = categoryId;
+            Category = category;
+            WerkstattId = werkstattId;
+            Werkstatt = werkstatt;
+        }
+
         public long LeistungenId { get; set; }
 
         public string Name { get; set; }
@@ -21,6 +32,9 @@ namespace Spg.AutoWerkstatt.Domain.Model
 
 
         protected List<Price> _prices = new();
+
+       
+
         public virtual IReadOnlyList<Price> Prices => _prices;
 
 

@@ -11,18 +11,30 @@ namespace Spg.AutoWerkstatt.Domain.Model
         public long WerkstattId { get; set; }
 
         public string Name { get; set; }
-        public string Stadt { get; set; }
+        public string Location { get; set; }
 
-        public string Adresse { get; set; }
-        public int  Plz { get; set; }
-        
-
-        public int Tel { get; set; }
+        public int Phone { get; set; }
         public string Email { get; set; }
+
+        public Address Address { get; set; }
+       
+        protected List<Category> _categories = new();
+        public virtual IReadOnlyList<Category> Categories => _categories;
 
 
         protected List<Leistungen> _leistungens = new();
-        public virtual IReadOnlyList<Leistungen> Leistungens => _leistungens;
+
+        public Werkstatt(long werkstattId, string name, string location, int phone, string email, Address address)
+        {
+            WerkstattId = werkstattId;
+            Name = name;
+            Location = location;
+            Phone = phone;
+            Email = email;
+            Address = address;
+        }
+
+        //public virtual IReadOnlyList<Leistungen> Leistungens => _leistungens;
 
     }
 }
