@@ -13,13 +13,18 @@ namespace Spg.AutoWerkstatt.DbEf.Configurations
     {
         public void Configure(EntityTypeBuilder<Leistungen> builder)
         {
-            builder.HasKey(x => x.LeistungenId);
-            builder.Property(x => x.LeistungenId).UseIdentityColumn();
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).UseIdentityColumn();
 
             builder
-                .HasOne<Category>()
-                .WithMany(y => y.Leistungens)
-                .HasForeignKey(y => y.LeistungenId);
+                .HasOne<Category>(x => x.Category)
+                .WithMany(x => x.Leistungens)
+                .HasForeignKey(x => x.CategoryId);
+
+            builder
+                .HasMany<Price>(x => x.Prices)
+                .WithOne(x => x.Leistungen)
+                .HasForeignKey(x => x.LeistungId);
         }
     }
 }

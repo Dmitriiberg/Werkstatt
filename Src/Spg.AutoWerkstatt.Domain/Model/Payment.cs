@@ -8,12 +8,21 @@ namespace Spg.AutoWerkstatt.Domain.Model
 {
     public enum PaymentStates { Reserved = 0, InPayment, Payed, Rejected }
 
-    public class Payment
+    public class Payment : EntityBase
     {
-        public long PaymentId { get; set; }
+        protected Payment() { }
+        public Payment(PaymentStates paymentStates, decimal price)
+        {
+            PaymentStates = paymentStates;
+            Price = price;
+        }
 
         public PaymentStates PaymentStates { get; set; }
 
         public decimal Price { get; set; }
+
+        public long ShoppingCartId { get; set; }
+        public ShoppingCart ShoppingCart { get; private set; } = null!;
+
     }
 }

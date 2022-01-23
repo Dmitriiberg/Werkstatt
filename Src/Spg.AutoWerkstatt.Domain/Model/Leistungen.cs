@@ -8,19 +8,17 @@ using System.Threading.Tasks;
 namespace Spg.AutoWerkstatt.Domain.Model
 {
 
-    public class Leistungen
+    public class Leistungen : EntityBase
     {
-        public Leistungen(long leistungenId, string name, long categoryId, Category category, long werkstattId, Werkstatt werkstatt)
+        protected Leistungen() { }
+        public Leistungen(string name, long categoryId, Category category, long werkstattId, Werkstatt werkstatt)
         {
-            LeistungenId = leistungenId;
             Name = name;
             CategoryId = categoryId;
             Category = category;
             WerkstattId = werkstattId;
             Werkstatt = werkstatt;
         }
-
-        public long LeistungenId { get; set; }
 
         public string Name { get; set; }
 
@@ -30,11 +28,8 @@ namespace Spg.AutoWerkstatt.Domain.Model
         public long WerkstattId { get; set; }
         public virtual Werkstatt Werkstatt { get; set; }
 
-        //public IList<Price> prices { get; set; }
 
         protected List<Price> _prices = new();
-
-
 
         public virtual IReadOnlyList<Price> Prices => _prices;
 

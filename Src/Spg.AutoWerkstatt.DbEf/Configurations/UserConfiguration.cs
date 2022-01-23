@@ -12,8 +12,8 @@ namespace Spg.AutoWerkstatt.DbEf.Configurations
     {
         public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<User> builder)
         {
-            builder.HasKey(x => x.UserId);
-            builder.Property(x => x.UserId).UseIdentityColumn();
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).UseIdentityColumn();
 
             builder
                 .HasMany<ShoppingCart>()

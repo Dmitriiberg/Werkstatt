@@ -7,17 +7,22 @@ using System.Threading.Tasks;
 namespace Spg.AutoWerkstatt.Domain.Model
 {
     public enum States { ACTIVE = 0, INPAYMENT, SENT }
-    public class ShoppingCart
+
+    public class ShoppingCart : EntityBase
     {
-        public long ShoppingCartId { get; set; }
+        public ShoppingCart(States state, long userId, User user)
+        {
+            State = state;
+            UserId = userId;
+            User = user;
+        }
 
         public States State { get; set; }
 
         public long UserId { get; set; }
         public User User { get; set; }
 
-        public long PaymentId { get; set; }
-        public IReadOnlyList<Payment> Payments { get; set; }
-
+        private List<Payment> _paymentList = new();
+        public IReadOnlyList<Payment> Payments => _paymentList;
     }
 }

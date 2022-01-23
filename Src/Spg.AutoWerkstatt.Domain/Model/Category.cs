@@ -6,23 +6,21 @@ using System.Threading.Tasks;
 
 namespace Spg.AutoWerkstatt.Domain.Model
 {
-    public class Category
+    public class Category : EntityBase
     {
-        public Category(string name, Werkstatt werkstatt)
+        protected Category() { }
+        public Category(string name)
         {
             Name = name;
-            WerkstattNavigation = werkstatt;
-
         }
-        public long CategoryId { get; set; }
 
         public string Name { get; set; }
 
         public int PriceMultiplay { get; set; }
 
-        public virtual Werkstatt WerkstattNavigation { get; private set; }
+        public virtual IList<Leistungen> Leistungens { get; set; }
 
-        protected List<Leistungen> _leistungens = new();
-        public virtual IReadOnlyList<Leistungen> Leistungens => _leistungens;
+        protected List<Werkstatt> _werkstatt = new();
+        public virtual IReadOnlyList<Werkstatt> Werkstatt => _werkstatt;
     }
 }

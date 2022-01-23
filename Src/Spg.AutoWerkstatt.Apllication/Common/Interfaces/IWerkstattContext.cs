@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace Spg.AutoWerkstatt.Apllication.Common.Interfaces
 {
-    public interface IWerkstattDbContext
+    public interface IWerkstattContext
     {
         DbSet<User> User { get; set; }
 
         DbSet<Category> Category {get; set;}
 
+        DbSet<Leistungen> Leistungens { get; set; }
     }
 }

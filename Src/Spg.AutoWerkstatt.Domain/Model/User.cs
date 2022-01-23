@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Spg.AutoWerkstatt.Domain.Model
 {
-    public class User
+    public class User : EntityBase
     {
-        public User(long userId, GenderTypes gender, string firstName, string lastName, int tel, string email, Address address)
+        protected User() { }
+
+        public User(GenderTypes gender, string firstName, string lastName, int tel, string email, Address address)
         {
-            UserId = userId;
             Gender = gender;
             FirstName = firstName;
             LastName = lastName;
@@ -20,7 +21,6 @@ namespace Spg.AutoWerkstatt.Domain.Model
         }
 
         public enum GenderTypes { FEMALE = 0, MALE = 1 };
-        public long UserId { get; set; }
 
         public GenderTypes Gender { get; set; }
         public string FirstName { get; set; }
@@ -34,11 +34,6 @@ namespace Spg.AutoWerkstatt.Domain.Model
 
         protected List<ShoppingCart> _shoppingCarts = new();
 
-        
-
         public virtual IReadOnlyList<ShoppingCart> ShoppingCarts => _shoppingCarts; 
-
-
-        //public IList<ShoppingCart> ShoppingCarts { get; set; }
     }
 }

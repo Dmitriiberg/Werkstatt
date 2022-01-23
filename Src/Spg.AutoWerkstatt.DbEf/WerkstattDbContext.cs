@@ -9,19 +9,22 @@ using System.Threading.Tasks;
 
 namespace Spg.AutoWerkstatt.DbEf
 {
-    public class WerkstattDbContext : DbContext, IWerkstattDbContext
+    public class WerkstattDbContext : DbContext, IWerkstattContext
     {
         public DbSet<User> User { get; set; }
         public DbSet<Category> Category { get; set; }
+        public DbSet<Leistungen> Leistungens { get; set; }
 
-        public DbSet<Leistungen> Leistungen { get; set; }
+        public void Seed()
+        {
 
-
-
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(WerkstattDbContext).Assembly);
+
+            Seed();
         }
     }
 }

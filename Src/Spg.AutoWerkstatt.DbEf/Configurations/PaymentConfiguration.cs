@@ -9,21 +9,16 @@ using System.Threading.Tasks;
 
 namespace Spg.AutoWerkstatt.DbEf.Configurations
 {
-    public class ShoppingCartConfiguration : IEntityTypeConfiguration<ShoppingCart>
+    public class PaymentConfiguration : IEntityTypeConfiguration<Payment>
     {
-        public void Configure(EntityTypeBuilder<ShoppingCart> builder)
+        public void Configure(EntityTypeBuilder<Payment> builder)
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
 
             builder
-                .HasOne<User>(u => u.User)
-                .WithMany(s => s.ShoppingCarts)
-                .HasForeignKey(x => x.UserId);
-
-            builder
-                .HasMany<Payment>(x => x.Payments)
-                .WithOne(x => x.ShoppingCart)
+                .HasOne<ShoppingCart>(x => x.ShoppingCart)
+                .WithMany(x => x.Payments)
                 .HasForeignKey(x => x.ShoppingCartId);
         }
     }

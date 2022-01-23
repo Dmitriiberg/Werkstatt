@@ -6,26 +6,21 @@ using System.Threading.Tasks;
 
 namespace Spg.AutoWerkstatt.Domain.Model
 {
-    public class Price
+    public class Price : EntityBase
     {
-        public Price(long priceId, decimal netto, decimal tax, Leistungen leistungen)
+        protected Price() { }
+        public Price( decimal netto, decimal tax, Leistungen leistungen)
         {
-            PriceId = priceId;
             Netto = netto;
             Tax = tax;
             Leistungen = leistungen;
         }
 
-        public long PriceId { get; set; }
-
         public decimal Netto { get; set; }
         public decimal Tax { get; set; }
-        public decimal Brutto { get { return Netto * 1.8M ; } }
+        public decimal Brutto => Netto * 1.8M;
 
         public long LeistungId { get; set; }
-
-        public virtual Leistungen Leistungen { get; set; }
-
-        public List<Leistungen> leistungens = new();
+        public virtual Leistungen Leistungen { get; private set; } = null!;
     }
 }
